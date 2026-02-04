@@ -4,7 +4,7 @@ import HelloWorld from './components/HelloWorld'
 export default function App() {
   return (
     <div>
-      <h1> A little Introduction </h1>
+      <h1> My Introduction </h1>
       <HelloWorld />
     </div>
   )
