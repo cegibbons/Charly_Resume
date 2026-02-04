@@ -3,5 +3,6 @@ node/node_modules/
 node/node_modules/.vite/
 .DS_Store
 node_modules/
+node_modules/.package-lock.json
 .vitest/
 reports/
