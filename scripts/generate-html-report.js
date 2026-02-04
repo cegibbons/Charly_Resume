@@ -147,6 +147,7 @@ const html = `<!doctype html>
   <div class="summary">
     <p>Generated: ${now}</p>
     <p>Total Files: <strong>${files.length}</strong> — <span class="pass">✓ Passed: ${passed}</span> — <span class="fail">✗ Failed: ${failed}</span></p>
+    <button class="toggle-btn" onclick="togglePassedTests(this)">▼ Hide passed tests</button>
   </div>
 
   ${files.map(f => {
