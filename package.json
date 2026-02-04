@@ -8,7 +8,7 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest",
+    "test": "vitest run; npm run report",
     "report": "node scripts/generate-html-report.js",
     "test:report": "vitest run && npm run report"
   },
