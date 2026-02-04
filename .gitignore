@@ -1,4 +1,7 @@
 node/
 node/node_modules/
-node/node_modules/.vite/.DS_Store
+node/node_modules/.vite/
+.DS_Store
+node_modules/
+.vitest/
 reports/
