@@ -8,7 +8,9 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "report": "node scripts/generate-html-report.js",
+    "test:report": "vitest run && npm run report"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -19,6 +21,7 @@
     "@testing-library/react": "^14.0.0",
     "jsdom": "^28.0.0",
     "vite": "^7.3.1",
-    "vitest": "^0.34.3"
+    "vitest": "^0.34.3",
+    "vitest-html-reporter": "^1.0.0"
   }
 }
