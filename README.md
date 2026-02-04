@@ -1,8 +1,4 @@
-# Charly_Resume
-## Test
-### Another test push
-
-### HelloWorld React component
+# Charly's Personal Space
 
 Use the `HelloWorld` component by importing it in your React app:
 
