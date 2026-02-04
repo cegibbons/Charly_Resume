@@ -26,3 +26,11 @@ npm run dev
 ```
 
 Then open the dev server URL (usually http://localhost:5173) to see the demo.
+
+Run Unit Tes:
+
+```bash
+npm run test
+```
+
+Then open test-report.html file to see results.
