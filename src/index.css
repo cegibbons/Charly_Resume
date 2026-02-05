@@ -5,3 +5,16 @@ body {
   padding: 1rem;
 }
 
+
+:root {
+  --button-main: #f44336;
+  --button-hover: #b23c17;
+}
+
+.buttonColors.MuiButton-contained {
+  background-color: var(--button-main);
+}
+
+.buttonColors.MuiButton-contained:hover {
+  background-color: var(--button-hover);
+}

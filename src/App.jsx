@@ -1,36 +1,20 @@
 import React, { useState } from 'react'
 import HelloWorld from './components/HelloWorld'
-import CharlyPicture from './components/CharlyPicture'
-import ResumePdf from './components/ResumePdf'
-import Button from '@mui/material/Button';
+import Header from './components/Header'
 import resumePdf from './images/Charly_Gibbons_Resume.pdf'
-import { Typography } from '@mui/material';
+import { Typography, Button, Grid, Container } from '@mui/material';
 
 export default function App() {
-  const [showResume, setShowResume] = useState(false);
-
-  const handlePictureClick = () => {
-    setShowResume(true);
-    window.open(resumePdf, '_blank', 'noopener,noreferrer');
-  };
-
   return (
-    <>
       <div>
-        {showResume ? (
-          <ResumePdf onBack={() => setShowResume(false)} />
-        ) : (
-          <>
-            <HelloWorld />
-            <CharlyPicture />
-          </>
-        )}
+            <Header />
+            <Container>
+              <Grid container justifyContent="space-between" alignItems="center" spacing={2}>
+                <Grid item xs={6}>
+                  <HelloWorld />
+                </Grid>
+              </Grid>
+            </Container>
       </div>
-      <div>
-        <Button variant="contained" onClick={handlePictureClick}>
-         <Typography>Click to View Resume</Typography>
-        </Button>
-      </div>
-    </>
   )
 }
