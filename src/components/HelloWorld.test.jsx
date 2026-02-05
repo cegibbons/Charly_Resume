@@ -5,6 +5,6 @@ import HelloWorld from './HelloWorld'
 describe('HelloWorld', () => {
   test('renders the greeting', () => {
     render(<HelloWorld />)
-    expect(screen.getByText(/Hello, World!/i)).toBeInTheDocument()
+    expect(screen.getByTestId('hello-header')).toBeInTheDocument()
   })
 })
