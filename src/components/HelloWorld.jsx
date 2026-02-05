@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Typography, Box } from '@mui/material';
 import CharlyPicture from './CharlyPicture';
 
-export default function HelloWorld() {
+const HelloWorld = () => {
 
   return (
     <Box 
@@ -53,3 +53,5 @@ export default function HelloWorld() {
       </Box>
   );
 }
+
+export default HelloWorld;

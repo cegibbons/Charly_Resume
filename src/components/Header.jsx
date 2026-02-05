@@ -2,10 +2,9 @@ import React from "react";
 import Logo from "../images/cg_logo.png";
 import resumePdf from "../images/Charly_Gibbons_Resume.pdf";
 import { Container, Grid, Box, Link } from "@mui/material";
+import Search from "./Search";
 
-
-
-export default function Header() {
+const Header = () => {
   const handleResumeClick = (event) => {
     event.preventDefault();
     window.open(resumePdf, "_blank", "noopener,noreferrer");
@@ -31,6 +30,8 @@ export default function Header() {
             <Box
               sx={{
                 typography: "body1",
+                display: "flex",
+                alignItems: "center",
                 "& > :not(style) ~ :not(style)": {
                   ml: 2,
                 },
@@ -46,10 +47,14 @@ export default function Header() {
               <Link href="#" variant="body2">
                 About
               </Link>
+              <Search/>
             </Box>
           </Grid>
+
         </Grid>
       </Container>
     </header>
   );
 }
+
+export default Header;
