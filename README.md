@@ -1,21 +1,5 @@
 # Charly's Personal Space
 
-Use the `HelloWorld` component by importing it in your React app:
-
-```jsx
-import HelloWorld from './src/components/HelloWorld';
-
-function App() {
-	return (
-		<div>
-			<HelloWorld />
-		</div>
-	);
-}
-
-export default App;
-```
-
 ## Local setup and running the app
 
 ### Prerequisites
@@ -26,7 +10,7 @@ export default App;
 ### 1) Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/cegibbons/Charly_Resume.git
 cd Charly_Resume
 ```
 
