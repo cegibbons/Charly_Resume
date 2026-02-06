@@ -19,6 +19,24 @@ body {
   background-color: var(--button-hover);
 }
 
+.pagination .MuiPaginationItem-root:hover {
+  background-color: var(--button-hover);
+  color: #fff;
+  border-color: var(--button-hover);
+}
+
+.pagination .MuiPaginationItem-root.Mui-selected {
+  background-color: var(--button-hover);
+  color: #fff;
+  border-color: var(--button-hover);
+}
+
+.pagination .MuiPaginationItem-root.Mui-selected:hover {
+  background-color: var(--button-hover);
+  color: #fff;
+  border-color: var(--button-hover);
+}
+
 .header-buttons {
   display: flex;
   align-items: center;
@@ -42,8 +60,8 @@ body {
 }
 
 .header-logo {
-  width: 160px;
-  height: auto;
+  width: 250px;
+  height: 180px;
 }
 
 .hello-world {

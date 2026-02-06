@@ -39,7 +39,12 @@ const App = () => {
       <Container sx={{ mt: "auto" }}>
         <Grid container justifyContent="center" alignItems="center" spacing={2}>
           <Grid>
-            <Pagination count={3} variant="outlined" shape="rounded" />
+            <Pagination
+              count={3}
+              variant="outlined"
+              shape="rounded"
+              className="pagination"
+            />
           </Grid>
         </Grid>
       </Container>

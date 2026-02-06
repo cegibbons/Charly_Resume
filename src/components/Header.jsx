@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../images/cg_logo.png";
+import Logo from "../images/cg-logo.png";
 import resumePdf from "../images/Charly_Gibbons_Resume.pdf";
 import { Container, Grid, Box, Button } from "@mui/material";
 import Search from "./Search";
