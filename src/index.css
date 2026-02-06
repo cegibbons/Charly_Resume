@@ -178,6 +178,13 @@ body {
   .header-buttons {
     justify-content: center;
     margin-bottom: 8px;
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .search-fields {
@@ -188,6 +195,8 @@ body {
     padding-left: 8px;
     padding-right: 8px;
     box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hello-world {
@@ -272,10 +281,7 @@ body {
   }
 
   .search-container {
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
+    display: contents;
   }
 
   .search-break {
@@ -314,6 +320,12 @@ body {
     padding-right: 16px;
   }
 
+
+@media (min-width: 768px) and (max-width: 820px) {
+  .hello-world {
+    margin-top: 16px;
+  }
+}
   .resume-pdf-frame {
     height: 65vh;
   }

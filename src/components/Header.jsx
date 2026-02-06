@@ -6,14 +6,23 @@ import Search from "./Search";
 
 const Header = () => {
   return (
-      <Container sx={{ display: "flex", justifyContent: "center" }}>
+      <Container maxWidth={false} sx={{ display: "flex", justifyContent: "center" }}>
         <Grid
           container
           alignItems="center"
           justifyContent="space-between"
           spacing={2}
           direction={{ xs: "column", sm: "row" }}
-          sx={{ maxWidth: 1200, width: "100%" }}
+          sx={{
+            maxWidth: 1200,
+            width: "100%",
+            mx: "auto",
+            "@media (min-width: 768px) and (max-width: 820px)": {
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            },
+          }}
         >
           <Grid item>
             <img
