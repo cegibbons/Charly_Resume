@@ -1,15 +1,10 @@
 import React from "react";
 import Logo from "../images/cg-logo.png";
-import resumePdf from "../images/Charly_Gibbons_Resume.pdf";
 import { Container, Grid, Box, Button } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import Search from "./Search";
 
 const Header = () => {
-  const handleResumeClick = (event) => {
-    event.preventDefault();
-    window.open(resumePdf, "_blank", "noopener,noreferrer");
-  };
-
   return (
       <Container sx={{ display: "flex", justifyContent: "center" }}>
         <Grid
@@ -29,13 +24,13 @@ const Header = () => {
           </Grid>
           <Grid item data-testid="header-buttons">
             <Box className="header-buttons">
-              <Button onClick={() => alert('Header Buttons clicked!')}>
+              <Button component={RouterLink} to="/">
                 Home
               </Button>
-              <Button onClick={handleResumeClick}>
+              <Button component={RouterLink} to="/resume">
                 Resume
               </Button>
-              <Button onClick={() => alert('Header Buttons clicked!')}>
+              <Button component={RouterLink} to="/about">
                 About
               </Button>
               <Search/>

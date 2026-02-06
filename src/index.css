@@ -39,6 +39,25 @@ body {
   border-color: var(--button-hover);
 }
 
+.resume-pdf {
+  width: 100%;
+}
+
+.resume-pdf-frame-wrap {
+  margin-top: 16px;
+}
+
+.resume-pdf-frame {
+  width: 100%;
+  max-width: 100%;
+  height: 75vh;
+  border: none;
+}
+
+.resume-pdf-link {
+  margin-top: 8px;
+}
+
 .header-buttons {
   display: flex;
   align-items: center;
@@ -67,6 +86,40 @@ body {
 
 .header-buttons .MuiButton-root.buttonColors:hover {
   color: #fff;
+}
+
+.search-container {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-fields {
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-icon-wrap {
+  display: inline-flex;
+}
+
+.search-break {
+  display: none;
+}
+
+.search-input {
+  margin-left: 8px;
+}
+
+.search-input .MuiInputBase-root {
+  height: 36px;
+}
+
+.search-button {
+  margin-left: 8px;
+  min-width: 72px;
+  height: 36px;
+  padding: 0 12px;
 }
 
 .header-logo {
@@ -124,6 +177,17 @@ body {
 
   .header-buttons {
     justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .search-fields {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
   }
 
   .hello-world {
@@ -133,6 +197,110 @@ body {
   .hello-world-grid-container {
     padding-left: 8px;
     padding-right: 8px;
+  }
+
+  .search-input {
+    margin-left: 6px;
+  }
+
+  .search-input .MuiInputBase-root {
+    height: 32px;
+  }
+
+  .search-button {
+    margin-left: 6px;
+    min-width: 64px;
+    height: 32px;
+    padding: 0 10px;
+  }
+
+  .search-input {
+    margin-left: 0;
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .search-input .MuiInputBase-input::placeholder {
+    text-align: center;
+  }
+
+  .search-input .MuiInputBase-input {
+    text-align: center;
+  }
+
+  .search-button {
+    margin-left: 0;
+    width: 100%;
+    flex-basis: 100%;
+    margin-top: 6px;
+  }
+
+  .resume-pdf-frame {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-buttons {
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 16px;
+  }
+
+  .header-buttons > :not(style) ~ :not(style) {
+    margin-left: 8px;
+  }
+
+  .search-input .MuiInputBase-root {
+    height: 30px;
+  }
+
+  .search-button {
+    min-width: 56px;
+    height: 30px;
+    padding: 0 8px;
+  }
+
+  .search-fields {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+  }
+
+  .search-container {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .search-break {
+    display: block;
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  .search-icon-wrap {
+    flex: 0 0 auto;
+  }
+
+  .search-fields {
+    display: flex;
+    flex: 1 0 100%;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+  }
+
+  .search-fields {
+    display: flex;
+    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -144,6 +312,10 @@ body {
   .hello-world-grid-container {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .resume-pdf-frame {
+    height: 65vh;
   }
 }
 
@@ -160,5 +332,103 @@ body {
   .hello-world-picture {
     justify-content: flex-end;
     margin-top: 0;
+  }
+
+  .resume-pdf-frame {
+    height: 80vh;
+  }
+}
+
+/* Phone-specific adjustments */
+@media (max-width: 360px) {
+  .resume-pdf-frame {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 375px) and (min-height: 667px) {
+  .resume-pdf-frame {
+    height: 52vh;
+  }
+}
+
+@media (max-width: 390px) and (min-height: 844px) {
+  .resume-pdf-frame {
+    height: 56vh;
+  }
+}
+
+@media (max-width: 414px) and (min-height: 896px) {
+  .resume-pdf-frame {
+    height: 58vh;
+  }
+}
+
+@media (max-width: 430px) and (min-height: 932px) {
+  .resume-pdf-frame {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 412px) and (min-height: 914px) {
+  .resume-pdf-frame {
+    height: 59vh;
+  }
+}
+
+@media (max-width: 344px) and (min-height: 882px) {
+  .resume-pdf-frame {
+    height: 54vh;
+  }
+}
+
+@media (max-width: 412px) and (min-height: 915px) {
+  .resume-pdf-frame {
+    height: 59vh;
+  }
+}
+
+@media (max-width: 360px) and (min-height: 740px) {
+  .resume-pdf-frame {
+    height: 53vh;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 540px) and (min-height: 720px) {
+  .resume-pdf-frame {
+    height: 62vh;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (min-height: 1024px) {
+  .resume-pdf-frame {
+    height: 70vh;
+  }
+}
+
+@media (min-width: 820px) and (min-height: 1180px) {
+  .resume-pdf-frame {
+    height: 72vh;
+  }
+}
+
+@media (min-width: 853px) and (min-height: 1280px) {
+  .resume-pdf-frame {
+    height: 72vh;
+  }
+}
+
+/* Landscape tablets */
+@media (min-width: 1024px) and (max-height: 600px) {
+  .resume-pdf-frame {
+    height: 65vh;
+  }
+}
+
+@media (min-width: 1280px) and (max-height: 800px) {
+  .resume-pdf-frame {
+    height: 75vh;
   }
 }

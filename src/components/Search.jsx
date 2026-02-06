@@ -48,35 +48,39 @@ const Search = ({ onQueryChange }) => {
     }, [isOpen]);
 
     return (
-        <div ref={containerRef} style={{ display: "inline-flex", alignItems: "center" }}>
+        <div ref={containerRef} className="search-container">
             {!isOpen && (
-                <SearchIcon
-                    sx={{ cursor: "pointer" }}
-                    onClick={handleToggle}
-                    data-testid="search-icon"
-                />
+                <span className="search-icon-wrap">
+                    <SearchIcon
+                        sx={{ cursor: "pointer" }}
+                        onClick={handleToggle}
+                        data-testid="search-icon"
+                    />
+                </span>
             )}
             {isOpen && (
                 <>
+                    <span className="search-break" aria-hidden="true" />
+                    <div className="search-fields">
                     <TextField
                         size="small"
                         placeholder="Search"
                         variant="outlined"
                         data-testid="search-input"
-                        sx={{ ml: 1 }}
+                        className="search-input"
                         value={query}
                         onChange={handleQueryChange}
                     />
                     <Button
                         variant="contained"
                         size="small"
-                        sx={{ ml: 1 }}
+                        className="search-button buttonColors"
                         onClick={handleSearch}
                         data-testid="search-button"
-                        className="buttonColors"
                     >
                         Search
                     </Button>
+                    </div>
                 </>
             )}
         </div>

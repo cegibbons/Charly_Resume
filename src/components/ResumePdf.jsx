@@ -1,17 +1,11 @@
 import React from 'react';
-import Button from '@mui/material/Button';
 import resumePdf from '../images/Charly_Gibbons_Resume.pdf';
 
-export default function ResumePdf({ onBack }) {
+export default function ResumePdf() {
   return (
-    <div>
-      <Button variant="outlined" onClick={onBack}>
-        Back
-      </Button>
-      <div>
-        <a href={resumePdf} target="_blank" rel="noopener noreferrer">
-          View Resume (PDF)
-        </a>
+    <div className="resume-pdf">
+      <div className="resume-pdf-frame-wrap">
+        <iframe title="Resume PDF" src={resumePdf} className="resume-pdf-frame" />
       </div>
     </div>
   );
