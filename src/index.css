@@ -3,7 +3,6 @@ body {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   margin: 0;
   padding: 1rem;
-;
 }
 
 
@@ -47,6 +46,49 @@ body {
   height: auto;
 }
 
+.hello-world {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: "minion-pro, serif";
+}
+
+.hello-world-grid-container {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hello-world-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hello-world-header {
+  font-family: "minion-pro, serif" !important;
+  font-weight: bold;
+}
+
+.hello-world-description {
+  font-family: "minion-pro, serif" !important;
+  margin-top: 30px !important;
+}
+
+.hello-world-picture {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
 @media (max-width: 600px) {
   .header-logo {
     width: 120px;
@@ -54,5 +96,41 @@ body {
 
   .header-buttons {
     justify-content: center;
+  }
+
+  .hello-world {
+    padding: 16px;
+  }
+
+  .hello-world-grid-container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width: 600px) {
+  .hello-world {
+    padding: 24px;
+  }
+
+  .hello-world-grid-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 900px) {
+  .hello-world {
+    padding: 40px;
+  }
+
+  .hello-world-grid-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .hello-world-picture {
+    justify-content: flex-end;
+    margin-top: 0;
   }
 }
