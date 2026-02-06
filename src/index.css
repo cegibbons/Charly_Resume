@@ -13,10 +13,12 @@ body {
 
 .buttonColors.MuiButton-contained {
   background-color: var(--button-main);
+  color: #fff !important;
 }
 
 .buttonColors.MuiButton-contained:hover {
   background-color: var(--button-hover);
+  color: #fff !important;
 }
 
 .pagination .MuiPaginationItem-root:hover {
@@ -57,6 +59,14 @@ body {
 
 .header-buttons .MuiButton-root:hover {
   color: #b23c17;
+}
+
+.header-buttons .MuiButton-root.buttonColors {
+  color: #fff;
+}
+
+.header-buttons .MuiButton-root.buttonColors:hover {
+  color: #fff;
 }
 
 .header-logo {
