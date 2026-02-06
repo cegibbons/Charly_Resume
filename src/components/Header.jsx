@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../images/cg_logo.png";
 import resumePdf from "../images/Charly_Gibbons_Resume.pdf";
-import { Container, Grid, Box, Link } from "@mui/material";
+import { Container, Grid, Box, Button } from "@mui/material";
 import Search from "./Search";
 
 const Header = () => {
@@ -11,49 +11,38 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <Container>
+      <Container sx={{ display: "flex", justifyContent: "center" }}>
         <Grid
           container
           alignItems="center"
           justifyContent="space-between"
           spacing={2}
+          direction={{ xs: "column", sm: "row" }}
+          sx={{ maxWidth: 1200, width: "100%" }}
         >
           <Grid item>
             <img
               src={Logo}
               alt="Charly Gibbons"
-              style={{ width: 140, height: "auto" }}
+              className="header-logo"
             />
           </Grid>
-          <Grid item>
-            <Box
-              sx={{
-                typography: "body1",
-                display: "flex",
-                alignItems: "center",
-                "& > :not(style) ~ :not(style)": {
-                  ml: 2,
-                },
-              }}
-              onClick={() => alert('Header links clicked!')}
-            >
-              <Link href="#">
+          <Grid item data-testid="header-buttons">
+            <Box className="header-buttons">
+              <Button onClick={() => alert('Header Buttons clicked!')}>
                 Home
-              </Link>
-              <Link href={resumePdf} color="inherit" onClick={handleResumeClick}>
+              </Button>
+              <Button onClick={handleResumeClick}>
                 Resume
-              </Link>
-              <Link href="#" variant="body2">
+              </Button>
+              <Button onClick={() => alert('Header Buttons clicked!')}>
                 About
-              </Link>
+              </Button>
               <Search/>
             </Box>
           </Grid>
-
         </Grid>
       </Container>
-    </header>
   );
 }
 

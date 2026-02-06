@@ -3,6 +3,7 @@ body {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   margin: 0;
   padding: 1rem;
+;
 }
 
 
@@ -17,4 +18,41 @@ body {
 
 .buttonColors.MuiButton-contained:hover {
   background-color: var(--button-hover);
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  font-family: 'alternate-gothic-no-2-d, sans-serif';
+  font-size: 18px;
+  color: #001828;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.header-buttons > :not(style) ~ :not(style) {
+  margin-left: 16px;
+}
+
+.header-buttons .MuiButton-root {
+  color: #001828;
+}
+
+.header-buttons .MuiButton-root:hover {
+  color: #b23c17;
+}
+
+.header-logo {
+  width: 160px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .header-logo {
+    width: 120px;
+  }
+
+  .header-buttons {
+    justify-content: center;
+  }
 }

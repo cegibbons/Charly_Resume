@@ -1,16 +1,19 @@
 import React from "react";
-import CharlyPic from "../images/charly-pic.png";
-import Button from '@mui/material/Button';
+import CharlyPic from "../images/charly_pic.png";
 
 const CharlyPicture = () => {
-    return (
-        <Button onClick={() => alert('Picture clicked!')}>
-            <img 
-                src={CharlyPic} 
-                alt="Charly" 
-            />
-        </Button>
-    );
+  return (
+    <img
+      src={CharlyPic}
+      alt="Charly"
+      style={{
+        width: "100%",
+        maxWidth: 300,
+        height: "auto",
+        objectFit: "cover",
+      }}
+    />
+  );
 };
 
 export default CharlyPicture;
