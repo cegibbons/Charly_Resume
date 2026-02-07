@@ -16,7 +16,7 @@ const AboutPage = () => {
       <Grid container justifyContent="center" sx={{ width: "100%" }}>
         <Grid item xs={12} md={10} lg={8}>
           <Typography variant="h3" sx={{ textAlign: "center" }}>
-            Hello World
+            Coming Soon!
           </Typography>
         </Grid>
       </Grid>

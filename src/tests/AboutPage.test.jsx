@@ -11,7 +11,7 @@ describe('AboutPage', () => {
       </MemoryRouter>
     )
 
-    expect(screen.getByText('Hello World')).toBeInTheDocument()
+    expect(screen.getByText('Coming Soon!')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /page 1/i })).toBeInTheDocument()
   })
 })
