@@ -156,6 +156,7 @@ body,
 .hello-world-grid-container {
   padding-left: 8px;
   padding-right: 8px;
+  align-items: center;
 }
 
 .hello-world-grid {
@@ -179,7 +180,17 @@ body,
 .hello-world-picture {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 16px;
+}
+
+.charly-picture-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
 }
 
 @media (max-width: 600px) {
