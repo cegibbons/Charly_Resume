@@ -8,7 +8,9 @@ import ResumePage from "./pages/ResumePage";
 const App = () => {
   return (
     <BrowserRouter>
-      <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      <div
+        style={{ minHeight: "100%", display: "flex", flexDirection: "column" }}
+      >
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />

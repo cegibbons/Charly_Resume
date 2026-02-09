@@ -13,7 +13,7 @@ const HomePage = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          pb: { xs: 3, sm: 0, md: 3 },
+          pb: { xs: 2, sm: 1, md: 2 },
         }}
       >
         <Grid
@@ -34,7 +34,7 @@ const HomePage = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container sx={{ mt: "auto" }}>
+      <Container sx={{ mt: { xs: 2, md: 3 }, mb: { xs: 2, md: 3 } }}>
         <Grid container justifyContent="center" alignItems="center" spacing={2}>
           <Grid item>
             <PaginationNav />
