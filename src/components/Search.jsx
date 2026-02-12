@@ -64,7 +64,7 @@ const Search = ({ onQueryChange }) => {
                     <div className="search-fields">
                     <TextField
                         size="small"
-                        placeholder="Search"
+                        placeholder="Search This Website"
                         variant="outlined"
                         data-testid="search-input"
                         className="search-input"
