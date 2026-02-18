@@ -14,17 +14,24 @@ const ResumePage = () => {
           pb: { xs: 2, sm: 2, md: 2 },
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
         }}
       >
-        <Grid container justifyContent="center" sx={{ width: "100%" }}>
-          <Grid item xs={12} md={10} lg={9} sx={{ width: "100%" }}>
-            <ResumePdf />
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
+          <Grid container justifyContent="center" sx={{ width: "100%" }}>
+            <Grid item xs={12} md={10} lg={9} sx={{ width: "100%" }}>
+              <ResumePdf />
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
-      <Container sx={{ mt: { xs: 2, md: 3 }, mb: { xs: 2, md: 3 } }}>
-        <Grid container justifyContent="center" alignItems="center" spacing={2}>
+        </Box>
+        <Grid container justifyContent="center" sx={{ mt: "auto", pt: { xs: 2, md: 3 } }}>
           <Grid item>
             <PaginationNav />
           </Grid>

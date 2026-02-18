@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography, Box } from "@mui/material";
 import PaginationNav from "../components/PaginationNav";
 
 const AboutPage = () => {
@@ -13,11 +13,24 @@ const AboutPage = () => {
         flexDirection: "column",
       }}
     >
-      <Grid container justifyContent="center" sx={{ width: "100%" }}>
-        <Grid item xs={12} md={10} lg={8}>
-          <Typography variant="h3" sx={{ textAlign: "center" }}>
-            Coming Soon!
-          </Typography>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        sx={{ width: "100%", flex: 1 }}
+      >
+        <Grid
+          item
+          xs={12}
+          md={10}
+          lg={8}
+          sx={{ display: "flex", justifyContent: "center" }}
+        >
+          <Box className="about-container">
+            <Typography variant="h3" sx={{ textAlign: "center" }}>
+              Coming Soon!
+            </Typography>
+          </Box>
         </Grid>
       </Grid>
       <Grid container justifyContent="center" sx={{ mt: "auto", pt: { xs: 2, sm: 3 } }}>
