@@ -146,6 +146,8 @@ body,
 
 .search-input {
   margin-left: 8px;
+  width: 260px;
+  min-width: 260px;
 }
 
 .search-input .MuiInputBase-root {
@@ -176,6 +178,7 @@ body,
 .search-input .MuiInputBase-input::placeholder {
   color: rgba(255, 255, 255, 0.65);
   opacity: 1;
+  font-size: 0.8rem;
 }
 
 .search-button {
@@ -350,11 +353,20 @@ body,
     text-align: center;
   }
 
+  .search-input .MuiFormHelperText-root {
+    position: static !important;
+    margin-top: 4px;
+  }
+
   .search-button {
     margin-left: 0;
     width: 100%;
     flex-basis: 100%;
-    margin-top: 6px;
+    margin-top: 0;
+  }
+
+  .search-fields.has-error .search-button {
+    margin-top: 12px;
   }
 
   .resume-pdf-frame {

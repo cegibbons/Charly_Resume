@@ -2,11 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
+import { useNavigate } from "react-router-dom";
 
 const Search = ({ onQueryChange }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [query, setQuery] = useState("");
+    const [error, setError] = useState("");
     const containerRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleToggle = () => {
         setIsOpen((prev) => !prev);
@@ -14,7 +17,6 @@ const Search = ({ onQueryChange }) => {
 
     const handleSearch = () => {
         const trimmed = query.trim();
-        setIsOpen(false);
         if (!trimmed) {
             setQuery("");
             if (onQueryChange) {
@@ -22,13 +24,34 @@ const Search = ({ onQueryChange }) => {
             }
             return;
         }
-        alert(`Searching for: ${trimmed}`);
-        setIsOpen(false);
+        const normalized = trimmed.toLowerCase();
+        const routes = [
+            { keywords: ["home", "main", "landing"], path: "/" },
+            { keywords: ["resume", "cv"], path: "/resume" },
+            { keywords: ["about", "bio", "contact"], path: "/about" },
+        ];
+        const match = routes.find(({ keywords }) =>
+            keywords.some((word) => normalized.includes(word))
+        );
+        if (match) {
+            navigate(match.path);
+            setQuery("");
+            setError("");
+            setIsOpen(false);
+        } else {
+            setError("No results found.");
+        }
+        if (onQueryChange) {
+            onQueryChange(trimmed);
+        }
     };
 
     const handleQueryChange = (event) => {
         const nextValue = event.target.value;
         setQuery(nextValue);
+        if (error) {
+            setError("");
+        }
         if (onQueryChange) {
             onQueryChange(nextValue);
         }
@@ -39,13 +62,18 @@ const Search = ({ onQueryChange }) => {
 
         const handleClickOutside = (event) => {
             if (containerRef.current && !containerRef.current.contains(event.target)) {
-                setIsOpen(false);
+                if (!error || query.trim() === "") {
+                    if (!error) {
+                        setQuery("");
+                    }
+                    setIsOpen(false);
+                }
             }
         };
 
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, [isOpen]);
+    }, [isOpen, error, query]);
 
     return (
         <div ref={containerRef} className="search-container">
@@ -61,15 +89,33 @@ const Search = ({ onQueryChange }) => {
             {isOpen && (
                 <>
                     <span className="search-break" aria-hidden="true" />
-                    <div className="search-fields">
+                    <div className={`search-fields${error ? " has-error" : ""}`}>
                     <TextField
                         size="small"
-                        placeholder="Search This Website"
+                        placeholder="Search Pages (Home, Resume, About)"
                         variant="outlined"
                         data-testid="search-input"
                         className="search-input"
                         value={query}
                         onChange={handleQueryChange}
+                        error={Boolean(error)}
+                        helperText={error}
+                        sx={{
+                            position: "relative",
+                            "& .MuiFormHelperText-root": {
+                                position: "absolute",
+                                top: "100%",
+                                left: 0,
+                                right: 0,
+                                textAlign: "center",
+                                marginTop: "4px",
+                            },
+                        }}
+                        onKeyDown={(event) => {
+                            if (event.key === "Enter") {
+                                handleSearch();
+                            }
+                        }}
                     />
                     <Button
                         variant="contained"
