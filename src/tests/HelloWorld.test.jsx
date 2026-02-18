@@ -7,4 +7,9 @@ describe('HelloWorld', () => {
     render(<HelloWorld />)
     expect(screen.getByTestId('hello-header')).toBeInTheDocument()
   })
+
+  test('renders the logo', () => {
+    render(<HelloWorld />)
+    expect(screen.getByAltText('Charly Gibbons')).toBeInTheDocument()
+  })
 })

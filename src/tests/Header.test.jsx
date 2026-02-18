@@ -8,14 +8,13 @@ vi.mock('../components/Search', () => ({
 }))
 
 describe('Header', () => {
-  test('renders logo, buttons, and search', () => {
+  test('renders buttons and search', () => {
     render(
       <MemoryRouter>
         <Header />
       </MemoryRouter>
     )
 
-    expect(screen.getByAltText('Charly Gibbons')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /resume/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument()
