@@ -92,7 +92,7 @@ const Search = ({ onQueryChange }) => {
                     <div className={`search-fields${error ? " has-error" : ""}`}>
                     <TextField
                         size="small"
-                        placeholder="Search Pages (Home, Resume, About)"
+                        placeholder="SEARCH BY PAGE NAME"
                         variant="outlined"
                         data-testid="search-input"
                         className="search-input"

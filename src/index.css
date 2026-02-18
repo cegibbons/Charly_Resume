@@ -146,8 +146,8 @@ body,
 
 .search-input {
   margin-left: 8px;
-  width: 260px;
-  min-width: 260px;
+  width: 220px;
+  min-width: 220px;
 }
 
 .search-input .MuiInputBase-root {
@@ -179,6 +179,7 @@ body,
   color: rgba(255, 255, 255, 0.65);
   opacity: 1;
   font-size: 0.8rem;
+  text-align: center;
 }
 
 .search-button {
