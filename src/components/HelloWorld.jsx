@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Typography, Box } from '@mui/material';
 import CharlyPicture from './CharlyPicture';
+import Logo from "../images/cg-logo.png";
 
 const HelloWorld = () => {
 
@@ -17,6 +18,13 @@ const HelloWorld = () => {
           className="hello-world-grid"
           data-testid="hello-world-grid"
         >
+          <div className="header-logo-wrap" data-testid="hello-world-logo">
+            <img
+              src={Logo}
+              alt="Charly Gibbons"
+              className="header-logo"
+            />
+          </div>
           <Typography
             variant="h3"
             data-testid="hello-header"

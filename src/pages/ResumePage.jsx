@@ -1,11 +1,11 @@
 import React from "react";
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Box } from "@mui/material";
 import ResumePdf from "../components/ResumePdf";
 import PaginationNav from "../components/PaginationNav";
 
 const ResumePage = () => {
   return (
-    <>
+    <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
       <Container
         data-testid="resume-page"
         sx={{
@@ -14,6 +14,7 @@ const ResumePage = () => {
           pb: { xs: 2, sm: 2, md: 2 },
           display: "flex",
           flexDirection: "column",
+          justifyContent: "center",
         }}
       >
         <Grid container justifyContent="center" sx={{ width: "100%" }}>
@@ -29,7 +30,7 @@ const ResumePage = () => {
           </Grid>
         </Grid>
       </Container>
-    </>
+    </Box>
   );
 };
 

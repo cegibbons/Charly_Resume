@@ -10,7 +10,7 @@ const Header = () => {
         <Grid
           container
           alignItems="center"
-          justifyContent="space-between"
+          justifyContent="center"
           spacing={2}
           direction={{ xs: "column", sm: "row" }}
           sx={{
@@ -24,13 +24,6 @@ const Header = () => {
             },
           }}
         >
-          <Grid item className="header-logo-wrap">
-            <img
-              src={Logo}
-              alt="Charly Gibbons"
-              className="header-logo"
-            />
-          </Grid>
           <Grid item data-testid="header-buttons">
             <Box className="header-buttons">
               <Button

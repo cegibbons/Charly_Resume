@@ -12,11 +12,13 @@ const App = () => {
         style={{ minHeight: "100%", display: "flex", flexDirection: "column" }}
       >
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/resume" element={<ResumePage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
+        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/resume" element={<ResumePage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );
