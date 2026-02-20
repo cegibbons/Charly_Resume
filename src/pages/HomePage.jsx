@@ -24,10 +24,7 @@ const HomePage = () => {
           sx={{ maxWidth: 1200, width: "100%" }}
         >
           <Grid
-            item
-            xs={12}
-            md={8}
-            lg={8}
+            size={{ xs: 12, md: 12, lg: 12 }}
             sx={{ display: "flex", justifyContent: "center" }}
           >
             <HelloWorld />
@@ -36,7 +33,7 @@ const HomePage = () => {
       </Container>
       <Container sx={{ mt: { xs: 2, md: 3 }, mb: { xs: 2, md: 3 } }}>
         <Grid container justifyContent="center" alignItems="center" spacing={2}>
-          <Grid item>
+          <Grid size="auto">
             <PaginationNav />
           </Grid>
         </Grid>

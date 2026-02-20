@@ -20,10 +20,7 @@ const AboutPage = () => {
         sx={{ width: "100%", flex: 1 }}
       >
         <Grid
-          item
-          xs={12}
-          md={10}
-          lg={8}
+          size={{ xs: 12, md: 10, lg: 8 }}
           sx={{ display: "flex", justifyContent: "center" }}
         >
           <Box className="about-container">
@@ -34,7 +31,7 @@ const AboutPage = () => {
         </Grid>
       </Grid>
       <Grid container justifyContent="center" sx={{ mt: "auto", pt: { xs: 2, sm: 3 } }}>
-        <Grid item>
+        <Grid size="auto">
           <PaginationNav />
         </Grid>
       </Grid>

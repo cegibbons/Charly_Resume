@@ -1,10 +1,14 @@
 import React from "react";
 import Logo from "../images/cg-logo.png";
 import { Container, Grid, Box, Button } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Search from "./Search";
 
 const Header = () => {
+  const location = useLocation();
+  const getLinkClassName = (to) =>
+    location.pathname === to ? "header-link active" : "header-link";
+
   return (
       <Container maxWidth={false} sx={{ display: "flex", justifyContent: "center" }}>
         <Grid
@@ -24,32 +28,26 @@ const Header = () => {
             },
           }}
         >
-          <Grid item data-testid="header-buttons">
+          <Grid size="auto" data-testid="header-buttons">
             <Box className="header-buttons">
               <Button
                 component={NavLink}
                 to="/"
-                className={({ isActive }) =>
-                  isActive ? "header-link active" : "header-link"
-                }
+                className={getLinkClassName("/")}
               >
                 Home
               </Button>
               <Button
                 component={NavLink}
                 to="/resume"
-                className={({ isActive }) =>
-                  isActive ? "header-link active" : "header-link"
-                }
+                className={getLinkClassName("/resume")}
               >
                 Resume
               </Button>
               <Button
                 component={NavLink}
                 to="/about"
-                className={({ isActive }) =>
-                  isActive ? "header-link active" : "header-link"
-                }
+                className={getLinkClassName("/about")}
               >
                 About
               </Button>

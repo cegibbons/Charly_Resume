@@ -26,13 +26,13 @@ const ResumePage = () => {
           }}
         >
           <Grid container justifyContent="center" sx={{ width: "100%" }}>
-            <Grid item xs={12} md={10} lg={9} sx={{ width: "100%" }}>
+            <Grid size={{ xs: 12, md: 10, lg: 9 }} sx={{ width: "100%" }}>
               <ResumePdf />
             </Grid>
           </Grid>
         </Box>
         <Grid container justifyContent="center" sx={{ mt: "auto", pt: { xs: 2, md: 3 } }}>
-          <Grid item>
+          <Grid size="auto">
             <PaginationNav />
           </Grid>
         </Grid>
